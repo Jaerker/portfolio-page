@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from './navbar';
 import BackgroundImage from './backgroundImage';
 
-
 const AnimationLayout = ({
   children,
 }: {

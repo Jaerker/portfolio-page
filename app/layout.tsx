@@ -2,10 +2,8 @@
 import type { Metadata } from 'next'
 import { Chakra_Petch } from 'next/font/google'
 import './globals.css'
-import Navbar from './components/navbar'
 import AnimationLayout from './components/animationLayout'
 
-import BackgroundImage from './components/backgroundImage';
 
 const mainFont = Chakra_Petch({ weight: "700", subsets: ["latin"] });
 

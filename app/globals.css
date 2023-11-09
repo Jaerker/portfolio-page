@@ -4,23 +4,55 @@
 
 
 
-@keyframes change-page{
+@keyframes startup{
   0%{
-    opacity:100%;
-  }
-  50%{
-    opacity:0%;
+    opacity:0;
   }
   100%{
-    opacity:100%;
+    opacity:1;
   }
 }
+
+
 
 body {
 font-size: 2rem;
 background-color: #ffffff;
 background-image: url("../public/img/dark-geometric.png");
 } 
+
+@media (max-width:1000px) {
+  
+  .main-profile-pic-class{
+    position:fixed;
+    height: 10vh;
+    overflow: hidden;
+    opacity:40%;
+    animation: 200ms ease-in-out 0s 1 startup;
+    transition-duration: all 300ms;
+  }
+  .profile-pic-startup{
+    opacity:0%;
+  }
+  .start-page-profile-pic{
+    bottom:-10px;
+    right:-380px;
+  }
+  .about-page-profile-pic{
+    bottom:-10px;
+    right:0;
+    opacity:100%;
+  }
+  
+  .portfolio-and-experiences-page-profile-pic{
+    bottom:0;
+    right:0;
+  }
+  .knowledge-page-profile-pic{
+    bottom:-10px;
+    left:-380px;
+  }
+}
 
 ul {
   font-size:0.7em;
@@ -34,30 +66,33 @@ ul {
   background-image:url('../public/img/profile-pic.png');
   position:fixed;
   width:auto;
-  height: 40.5rem;
-  overflow: hidden;
-  opacity:30%;
-  animation: 1s ease-in-out 0s 1 startup;
+  height: 70vh;
+  overflow:hidden;
+  opacity:40%;
+  animation: 200ms ease-in-out 0s 1 startup;
   transition-duration: 300ms;
+  left:auto;
+  right:auto;
 
 }
 .profile-pic-startup{
   opacity:0%;
 }
 .start-page-profile-pic{
-  bottom:0;
+  bottom:-10px;
   right:-390px;
 }
 .about-page-profile-pic{
-  bottom:0;
+  bottom:-10px;
   right:0;
   opacity:100%;
 }
-.knowledge-and-experiences-page-profile-pic::before{
-  right:-390px;
-}
-.knowledge-and-experiences-page-profile-pic{
+
+.portfolio-and-experiences-page-profile-pic{
   bottom:0;
   right:0;
-  opacity:30%;
+}
+.knowledge-page-profile-pic{
+  bottom:-10px;
+  right:60vw;
 }
